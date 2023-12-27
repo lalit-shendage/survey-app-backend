@@ -1,4 +1,3 @@
-// middlewares/authenticate.js
 const jwt = require('jsonwebtoken');
 key=process.env.JWT_KEY
 

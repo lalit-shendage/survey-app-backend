@@ -1,4 +1,3 @@
-// controllers/surveyController.js
 const mongoose = require('mongoose');
 const Survey = mongoose.model('Survey');
 
@@ -64,5 +63,14 @@ exports.submitResponse = async (req, res) => {
   }
 };
 
+exports.getAllSurveys = async (req, res) => {
+  try {
+    const surveys = await Survey.find();
 
+    res.status(200).json({ surveys });
+  } catch (error) {
+    console.error('Error fetching surveys:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
 

@@ -1,4 +1,3 @@
-// routes/survey.js
 const express = require('express');
 const router = express.Router();
 const authenticate = require('../middlewares/authenticate');
@@ -10,6 +9,8 @@ router.post('/create', authenticate, surveyController.createSurvey);
 
 // Get survey by ID
 router.get('/:id', surveyController.getSurveyById);
+
+router.get('/all', surveyController.getAllsurveys);
 
 // Submit response to a survey
 router.post('/submit/:id',surveySubmissionLimiter, surveyController.submitResponse);

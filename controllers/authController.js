@@ -1,4 +1,3 @@
-// controllers/authController.js
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
 const bcrypt = require('bcryptjs');
