@@ -10,7 +10,7 @@ router.post('/create', authenticate, surveyController.createSurvey);
 // Get survey by ID
 router.get('/:id', surveyController.getSurveyById);
 
-router.get('/all', surveyController.getAllsurveys);
+router.get('/', surveyController.getAllSurveys);
 
 // Submit response to a survey
 router.post('/submit/:id',surveySubmissionLimiter, surveyController.submitResponse);
